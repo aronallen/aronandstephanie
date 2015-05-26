@@ -11,7 +11,7 @@ var LanguageMenu = React.createClass({
         {_.map(content.locales, function (value, key) {
           console.log(content.locale, key);
             return (
-              <li className={"language-menu__locale " + ((content.locale === key) ? "language-menu__locale--acitve" : "")} onClick={function () {
+              <li className={"language-menu__locale " + ((content.locale === key) ? "language-menu__locale--active" : "")} onClick={function () {
                 setter(key);}}>
                 {value}
               </li>);
