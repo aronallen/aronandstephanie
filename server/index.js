@@ -4,7 +4,7 @@ var port = require('./port');
 
 
 app.use($$morgan('combined'));
-//api proxy
+
 
 app.use($$express.static(publicDir));
 app.use('/*', function (req, res) {
