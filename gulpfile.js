@@ -31,7 +31,7 @@ var paths = {
 		test : srcDir + '/component-test.jsx',
 		jsFiles : srcDir + '/**/*.{js,jsx}',
 		dashFile : srcDir + '/dasheverywhere.min.js',
-		htmlFiles : srcDir + '/**/*.html',
+		htmlFiles : srcDir + '/**/*.{html,json}',
 		lessFiles : srcDir + '/**/*.less',
 		lessIndex : srcDir + '/**/index--**.less',
 		imgFiles: srcDir + '/images/*.{jpeg,jpg,gif,svg,png}',
@@ -77,25 +77,16 @@ gulp.task('clean', function () {
 
 
 gulp.task('styles', function () {
-	gulp.src(paths.src.lessIndex)
-		.pipe(foreach(function (stream, file) {
-			var name;
-			var match = (file.relative).match(/styles\/index\-\-([a-z]+)\.less/);
-			match !== null && (name = match[1]);
-			return eventStream.merge(
-				stream,
-				gulp.src(paths.src.lessFiles).pipe(ignore(['/**/index--**.less', '/**/**-icon-font.less']))
-			)
-			.pipe(concat(name + '.less'))
-			.pipe(less({
-				paths : [srcDir]
-			}))
-			.pipe(autoPrefixer({
-				browsers: ['last 3 versions'],
-			}));
-		}))
-		.pipe(gulp.dest(paths.dest.style))
-		.pipe(isProduction ? util.noop() : livereload());
+	gulp.src(paths.src.lessFiles)
+	.pipe(concat('style.less'))
+	.pipe(less({
+		paths : [srcDir]
+	}))
+	.pipe(autoPrefixer({
+		browsers: ['last 3 versions'],
+	}))
+	.pipe(gulp.dest(paths.dest.style))
+	.pipe(isProduction ? util.noop() : livereload());
 });
 
 gulp.task('html', function () {

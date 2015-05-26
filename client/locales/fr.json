@@ -1,0 +1,25 @@
+{
+  "locale" : "fr",
+  "locales" : {
+    "fr" : "Français",
+    "en" : "Anglais",
+    "da" : "Danois"
+  },
+  "title" : "Mariage - Aron et Stéphanie",
+  "heading" : ["Wedding", "de", "Aron & Stéphanie"],
+  "preface" : "We are looking forward to our wedding, and we would kindly ask you to save the dates as we hope to see you at the venue you find most suitable",
+  "events"  : [
+    {
+      "datetime" : "The 13th of February 1:00 P.M.",
+      "title" : "Wedding in Denmark",
+      "description" : "We would be pleased to see you for our wedding at ? church in Copenhagen, Denmark",
+      "city" : "Copenhagen"
+    },
+    {
+      "datetime" : "The 27th of August 1:00 P.M.",
+      "title" : "Wedding in France",
+      "description" : "We would be pleased to see you for our wedding at ? church near Mulhouse, France",
+      "city" : "Mulhouse?"
+    }
+  ]
+}
