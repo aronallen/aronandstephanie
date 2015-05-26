@@ -2,18 +2,7 @@ var React = require('react');
 var moment = require('moment');
 var _ = require('lodash');
 var LanguageMenu = require('./language-menu.jsx');
-var Event = React.createClass({
-  render : function () {
-    var data = this.props.data;
-    return (
-      <div className="event">
-        <h3>{data.title}</h3>
-        <p>{data.description}</p>
-        <h4>{data.city} | {data.datetime}</h4>
-      </div>
-    );
-  }
-});
+var Event = require('./event.jsx');
 
 var Page = React.createClass({
 
@@ -23,7 +12,11 @@ var Page = React.createClass({
     var setter = this.props.data.setter;
     return (
       <div className="page" onClick={this.setLocale}>
+        <div className="page__photo">
+
+          <div className="page__photo__inner">
         <LanguageMenu {...this.props} />
+        <div className="page__heading">
         {content.heading.map(function (s, i, a) {
           if (a.length > 2) {
             if ((i % 2) === 0) {
@@ -35,9 +28,15 @@ var Page = React.createClass({
             return <h1>{s}</h1>;
           }
         })}
+      </div>
+          </div>
+        </div>
+
+        <div className="page__events">
         {content.events.map(function (o, i, a) {
           return <Event data={o} />;
         })}
+        </div>
       </div>
     );
   }

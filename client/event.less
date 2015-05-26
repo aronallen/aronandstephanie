@@ -1,0 +1,23 @@
+.event{
+  background-color: @color;
+  &:nth-child(odd){
+    background-color: @altColor;
+    border-color: @altColorDark;
+    .event__heading {
+      border-color: @altColorDark;
+    }
+  }
+  
+  border:1px solid @colorDark;
+  max-width:33em;
+  margin : 1em auto;
+  padding: 0 0 .5em;
+  width: 100%;
+}
+.event__heading{
+  border-color: @colorDark;
+  border-bottom:1px solid @colorDark;
+  padding:.5em;
+  background-color: rgba(255, 255, 255, .25);
+
+}
