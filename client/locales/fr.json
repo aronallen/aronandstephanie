@@ -11,13 +11,13 @@
   "events"  : [
     {
       "datetime" : "The 13th of February 1:00 P.M.",
-      "title" : "Wedding in Denmark",
+      "title" : "Mariage au Danemark",
       "description" : "We would be pleased to see you for our wedding at ? church in Copenhagen, Denmark",
       "city" : "Copenhagen"
     },
     {
       "datetime" : "The 27th of August 1:00 P.M.",
-      "title" : "Wedding in France",
+      "title" : "Mariage en France",
       "description" : "We would be pleased to see you for our wedding at ? church near Mulhouse, France",
       "city" : "Mulhouse?"
     }

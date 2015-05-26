@@ -19,7 +19,7 @@ var Page = React.createClass({
         <div className="page__heading">
         {content.heading.map(function (s, i, a) {
           if (a.length > 2) {
-            if ((i % 2) === 0) {
+            if (s.length > 3) {
               return <h1>{s}</h1>;
             } else {
               return <h2>{s}</h2>;
