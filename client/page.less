@@ -10,6 +10,10 @@
   position: absolute;
   bottom:1em;
   width: 100%;
+  h1,h2{
+    display: inline;
+    padding:0 .125em;
+  }
 }
 .page__photo{
   position: relative;
@@ -17,12 +21,6 @@
   height: 0;
   padding-bottom: 50%;
   color:white;
-  h1{
-    font-size: 4em;
-  }
-  h2{
-    font-size: 3em;
-  }
 }
 .page__photo__inner{
   width: 100%;
@@ -32,12 +30,4 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
-@media only screen and (max-width : 768px) {
-  .page__photo{
-    padding-bottom: 66%;
-  }
-  .page__heading{
-    bottom:3em;
-  }
 }
