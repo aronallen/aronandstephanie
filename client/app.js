@@ -15,5 +15,6 @@ function error () {
 
 data.property.onValue(function (response) {
   document.title = response.title;
+  document.body.lang = response.locale;
   React.render(React.createElement(Page, {content : response, data : data}), document.body);
 });
