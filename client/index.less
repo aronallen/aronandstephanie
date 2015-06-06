@@ -2,10 +2,11 @@
 @colorDark : #816981;
 @altColor : #C1CFBB;
 @altColorDark : #69815D;
-@white : #eee;
+@white : #EAE8E4;
+@black: #4C4942;
 
 html{
-
+  background-color: mix(@white, white, 50%);
   background-size: cover;
 }
 body, html{
@@ -15,23 +16,54 @@ body, html{
   font-size: 16px;
 }
 body{
-  max-width:1280px;
+  max-width:512px;
   margin:0 auto;
 }
 
-h1,h2,h3,h4,h5,h6{
-  margin:0;
-  font-family: 'Amatic SC', cursive;
+h1,h3,h5,h6{
+  margin:.33em;
+  color:@black;
+  font-family: 'Lobster Two', cursive;
 }
-h1{
-  font-size: 3em;
+h2,h4{
+  margin: .33em;
+  color:@black;
+  font-family: 'NeutrafaceCondensed-Bold', sans-serif;
 }
 h2{
+  background-color: @white;
+  position: relative;
+  z-index: 1;
+}
+
+
+h3 {
+  background-image: url('/images/banner.svg');
+  background-position: center .125em;
+  background-repeat: no-repeat;
+  color:white;
+  font-size: 2em;
+  line-height: 2em;
+  font-style:italic;
+}
+
+h5{
   font-size: 2em;
 }
 
+h6{
+  font-weight: normal;
+  font-style:italic;
+  font-size: 1.5em;
+}
 
-@media only screen and (max-width : 768px) {
+
+h1{
+  font-size: 3em;
+}
+
+
+@media only screen and (max-width : 512px) {
 
   h1{
     font-size: 2em;

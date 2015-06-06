@@ -4,11 +4,9 @@ var Event = React.createClass({
     var data = this.props.data;
     return (
       <div className="event">
-      <div className="event__heading">
-        <h3>{data.title}</h3>
-      </div>
-        <p>{data.description}</p>
-        <h4>{data.city} | {data.datetime}</h4>
+        <h5>{data.title}</h5>
+        <h6>{data.city}</h6>
+        
       </div>
     );
   }

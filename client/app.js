@@ -5,6 +5,8 @@ var data = require('./data.js');
 var Bacon = require('baconjs');
 
 
+
+require('./auto-reloader');
 function log () {
   console.log(arguments);
 }

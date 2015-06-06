@@ -5,6 +5,8 @@
   position: relative;
   width: 100%;
   background-color: @white;
+  box-shadow: 0 0 1px rgba(0,0,0,.1);
+  padding: 1em;
 }
 .page__heading{
   position: absolute;
@@ -14,21 +16,56 @@
     display: inline;
     padding:0 .125em;
   }
-  background-image: linear-gradient(transparent, rgba(0,0,0,.5));
+
 }
-.page__photo{
+.page__events .event img{
+  margin: 1em;
+
+}
+.page__events .event:last-child{
+  margin-bottom: 1em;
+}
+
+@keyframes rotate {
+  from {
+    transform:rotateZ(0deg);
+  }
+  to {
+    transform:rotateZ(360deg);
+  }
+}
+
+.page__bike__spurs {
+  position: absolute;
+  bottom:6%;
+  height: 33%;
+  animation : rotate 5s linear infinite;
+}
+.page__bike__spurs--left{
+  left:21.5%;
+}
+.page__bike__spurs--right{
+  right:20.5%;
+}
+
+.page__bike{
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 50%;
   color:white;
 }
-.page__photo__inner{
+.page__monogram{
+  padding-bottom: 1em;
+}
+.page__bike__couple{
+  width: 100%;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.page__bike__inner{
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url('/images/portrait.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }

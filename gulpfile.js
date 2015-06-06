@@ -35,7 +35,7 @@ var paths = {
 		lessFiles : srcDir + '/**/*.less',
 		lessIndex : srcDir + '/**/index--**.less',
 		imgFiles: srcDir + '/images/*.{jpeg,jpg,gif,svg,png}',
-		fontFiles: srcDir + '/**/*.{eot,woff,ttf}',
+		fontFiles: srcDir + '/**/*.{eot,woff,ttf,svg}',
 		iconFiles : [srcDir + '/icons/tdc/*.svg', srcDir + '/icons/yousee/*.svg']
 	},
 	dest : {

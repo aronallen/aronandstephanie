@@ -12,31 +12,26 @@ var Page = React.createClass({
     var setter = this.props.data.setter;
     return (
       <div className="page" onClick={this.setLocale}>
-        <div className="page__photo">
+        <div className="page__bike">
 
-          <div className="page__photo__inner">
-        <LanguageMenu {...this.props} />
-        <div className="page__heading">
-        {content.heading.map(function (s, i, a) {
-          if (a.length > 2) {
-            if (s.length > 3) {
-              return <h1>{s}</h1>;
-            } else {
-              return <h2>{s}</h2>;
-            }
-          } else {
-            return <h1>{s}</h1>;
-          }
-        })}
-      </div>
+          <div className="page__bike__inner">
+            <img className="page__bike__spurs page__bike__spurs--left" src="/images/spurs.svg" />
+            <img className="page__bike__spurs page__bike__spurs--right" src="/images/spurs.svg" />
+            <img className="page__bike__couple" src="/images/bike.svg" />
           </div>
         </div>
+        <h3>Save the Dates!</h3>
+
+        <h1>Aron & Stéphanie</h1>
+        <h2>ARE</h2>
+        <h1>Getting Married</h1>
 
         <div className="page__events">
         {content.events.map(function (o, i, a) {
           return <Event data={o} />;
         })}
         </div>
+        <img src="/images/monogram.svg" className="page__monogram" />
       </div>
     );
   }
